@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +9,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .card {
@@ -27,17 +27,17 @@ code {
   content: "\00a0";
   position: absolute;
   transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-bottom: 1px solid rgb(220 215 215 / 42%) !important
+  border-bottom: 1px solid rgb(220 215 215 / 42%) !important;
 }
-  .MuiFormLabel-root {
-    color:#009688 !important;
-    padding: 0;
-    font-size: 1rem;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.00938em;
-};
+.MuiFormLabel-root {
+  color: #009688 !important;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.00938em;
+}
 .MuiInput-underline:after {
   left: 0;
   right: 0;
@@ -45,13 +45,13 @@ code {
   content: "";
   position: absolute;
   transform: scaleX(0);
-  transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   border-bottom: 2px solid #f3f4f3 !important;
   pointer-events: none;
   background-color: transparent !important;
 }
 
-.logo-w img{
+.logo-w img {
   width: 200px;
 }
 
@@ -69,18 +69,22 @@ code {
   letter-spacing: 0.00938em;
   background-color: transparent !important;
 }
-.TypographyTitle h6{
-  color: cadetblue;
+.TypographyTitle h6 {
+  color: #bdd6d7;
+  font-weight: 600;
 }
-.success-box{
-  padding:20px;
+.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+  color: #fff !important;
 }
-.success-box h2{
-  color :green !important;
+.success-box {
+  padding: 20px;
 }
-.success-box p{
+.success-box h2 {
+  color: green !important;
+}
+.success-box p {
   margin-top: 20px !important;
-  color :#fff !important;
+  color: #fff !important;
 }
 .MuiTypography-displayBlock {
   display: block;
@@ -96,8 +100,30 @@ code {
   flex-shrink: 0;
   background-color: #607d8b !important;
 }
-.file-fild .form-control{
+.file-fild .form-control {
   background-color: transparent !important;
   border: 1px solid #009688 !important;
   color: #009688 !important;
+}
+
+.custom-textarea .form-control {
+  background: transparent;
+  border: 1px solid #009688;
+  color: #f3f4f3 !important;
+}
+.custom-textarea label {
+  color: #009688 !important;
+  margin-bottom: 20px;
+}
+.MuiButton-contained.Mui-disabled {
+  color: rgb(0 0 0 / 34%) !important;
+  box-shadow: none !important;
+  background-color: rgb(177 177 177 / 97%) !important;
+}
+.well-text p {
+  color: #fff;
+}
+.alex-btn a {
+  text-decoration: none !important;
+  text-transform: capitalize;
 }

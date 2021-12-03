@@ -1,11 +1,8 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-
+import Typography from "@material-ui/core/Typography";
 import React, { Fragment } from "react";
-
-
-
 // Destructuring props
 const PersonalInformation = ({
   handleNext,
@@ -37,6 +34,14 @@ const PersonalInformation = ({
 
   return (
     <Fragment>
+      <Typography
+        variant="subtitle2"
+        align="center"
+        style={{ margin: "10px 0" }}
+        className="TypographyTitle mt-5"
+      >
+        <h6> Personal information</h6>
+      </Typography>
       <Grid container spacing={2} noValidate>
         <Grid item xs={12} md={4}>
           <TextField
@@ -132,8 +137,6 @@ const PersonalInformation = ({
           />
         </Grid>
 
- 
-
         <Grid item xs={12} md={12}>
           <TextField
             fullWidth
@@ -146,15 +149,26 @@ const PersonalInformation = ({
             error={!!formErrors.livein}
             autocomplete="off"
             helperText={formErrors.livein}
-            required
           />
         </Grid>
         <Grid item xs={12} md={12}>
-        <div className="file-fild">
-        <label style={{fontSize:"12px"}} for="formFileMultiple" class="form-label MuiFormLabel-root mt-4">Uplode your government-issued ID, such as a driver’s license, a state-issued photo ID, or a passport.</label>
-        <input class="form-control mt-2" type="file" id="formFileMultiple" multiple />       
-      </div>
-      </Grid>
+          <div className="file-fild">
+            <label
+              style={{ fontSize: "12px" }}
+              for="formFileMultiple"
+              class="form-label MuiFormLabel-root mt-4"
+            >
+              Uplode your government-issued ID, such as a driver’s license, a
+              state-issued photo ID, or a passport.
+            </label>
+            <input
+              class="form-control mt-2"
+              type="file"
+              id="formFileMultiple"
+              multiple
+            />
+          </div>
+        </Grid>
       </Grid>
       <div
         style={{ display: "flex", marginTop: 50, justifyContent: "flex-end" }}

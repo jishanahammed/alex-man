@@ -3,10 +3,13 @@ import Typography from "@material-ui/core/Typography";
 import React, { useState } from "react";
 import imgurl from "../../../src/asset/logo.png";
 import formValidation from "../Helper/formValidation";
+import AmountofShares from "./amountofShares";
+import BusinessAddress from "./BusinessAddress";
 import ChooseState from "./ChooseState";
+import CompanyBusinessAddress from "./CompanyBusinessAddress";
+import CompanyDetails from "./CompanyDetails";
 import CompanyName from "./CompanyName";
 import Confirm from "./Confirm";
-// import FirstStep from "./FirstStep";
 import PersonalInformation from "./PersonalInformation";
 import PhysicalOperatingAddress from "./PhysicalOperatingAddress ";
 import Success from "./Success";
@@ -17,6 +20,10 @@ const labels = [
   "PhysicalOperatingAddress",
   "CompanyName",
   "Confirmation",
+  "BusinessAddress",
+  "CompanyBusinessAddress",
+  "CompanyDetails",
+  "AmountofShares",
 ];
 
 const initialValues = {
@@ -38,6 +45,17 @@ const initialValues = {
   zIPPostalCode: "",
   optionalinfo: "",
   companyName: "",
+  businessAddressaction: "",
+  CompanystreetAddress: "",
+  CompanycountryName: "",
+  Companycity: "",
+  CompanystateProvinceinfo: "",
+  CompanyzIPPostalCode: "",
+  Companyoptionalinfo: "",
+  ProductDescription: "",
+  businessDescription: "",
+  amount: "",
+  parValue: "",
 };
 
 const fieldsValidation = {
@@ -124,6 +142,70 @@ const fieldsValidation = {
     minLength: 3,
     maxLength: 200,
   },
+  businessAddressaction: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  CompanystreetAddress: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  CompanycountryName: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  Companycity: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  CompanystateProvinceinfo: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  CompanyzIPPostalCode: {
+    error: "",
+    validate: "isZip",
+  },
+  Companyoptionalinfo: {
+    error: "",
+    validate: "text",
+    minLength: 3,
+    maxLength: 200,
+  },
+  ProductDescription: {
+    error: "",
+    validate: "text",
+    minLength: 0,
+    maxLength: 200,
+  },
+  businessDescription: {
+    error: "",
+    validate: "text",
+    minLength: 0,
+    maxLength: 200,
+  },
+  amount: {
+    error: "",
+    validate: "isNumber",
+    minLength: 0,
+    maxLength: 200,
+  },
+  parValue: {
+    error: "",
+    validate: "isNumber",
+    minLength: 0,
+    maxLength: 200,
+  },
 };
 
 const StepForm = () => {
@@ -175,17 +257,8 @@ const StepForm = () => {
             formErrors={formErrors}
           />
         );
+
       case 2:
-        return (
-          <PhysicalOperatingAddress
-            handleNext={handleNext}
-            handleBack={handleBack}
-            handleChange={handleChange}
-            values={formValues}
-            formErrors={formErrors}
-          />
-        );
-      case 3:
         return (
           <CompanyName
             handleNext={handleNext}
@@ -195,7 +268,60 @@ const StepForm = () => {
             formErrors={formErrors}
           />
         );
+      case 3:
+        return (
+          <PhysicalOperatingAddress
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleChange={handleChange}
+            values={formValues}
+            formErrors={formErrors}
+          />
+        );
+
       case 4:
+        return (
+          <BusinessAddress
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleChange={handleChange}
+            values={formValues}
+            formErrors={formErrors}
+          />
+        );
+
+      case 5:
+        return (
+          <CompanyBusinessAddress
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleChange={handleChange}
+            values={formValues}
+            formErrors={formErrors}
+          />
+        );
+      case 6:
+        return (
+          <CompanyDetails
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleChange={handleChange}
+            values={formValues}
+            formErrors={formErrors}
+          />
+        );
+      case 7:
+        return (
+          <AmountofShares
+            handleNext={handleNext}
+            handleBack={handleBack}
+            handleChange={handleChange}
+            values={formValues}
+            formErrors={formErrors}
+          />
+        );
+
+      case 8:
         return (
           <Confirm
             handleNext={handleNext}

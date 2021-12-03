@@ -4,8 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import React, { Fragment } from "react";
 import Typography from "@material-ui/core/Typography";
+import React, { Fragment } from "react";
 
 // Destructuring props
 const ChooseState = ({
@@ -34,20 +34,19 @@ const ChooseState = ({
     "Kelly Snyder",
   ];
   return (
-
     <Fragment>
-    <Typography
-                variant="subtitle2"
-                align="center"
-                style={{ margin: "10px 0" }}
-             className="TypographyTitle mt-5" >
-             <h6>  Which state do you prefer to register your business in? </h6>
-              </Typography>
+      <Typography
+        variant="subtitle2"
+        align="center"
+        style={{ margin: "10px 0" }}
+        className="TypographyTitle mt-5"
+      >
+        <h6> Which state do you prefer to register your business in? </h6>
+      </Typography>
 
       <Grid container spacing={2} noValidate>
-  
         <Grid className="bg-cust" item xs={12} sm={12}>
-          <FormControl  fullWidth required margin="normal">
+          <FormControl fullWidth required margin="normal">
             <InputLabel>Choose State</InputLabel>
             <Select
               value={SelectState}

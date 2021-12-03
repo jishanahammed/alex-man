@@ -4,30 +4,30 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 // Destructuring props
-const PhysicalOperatingAddress = ({
+const CompanyBusinessAddress = ({
   handleNext,
   handleBack,
   handleChange,
   values: {
-    streetAddress,
-    countryName,
-    city,
-    stateProvinceinfo,
-    zIPPostalCode,
-    optionalinfo,
+    CompanystreetAddress,
+    CompanycountryName,
+    Companycity,
+    CompanystateProvinceinfo,
+    CompanyzIPPostalCode,
+    Companyoptionalinfo,
   },
   formErrors,
 }) => {
   // Check if all values are not empty or if there are some error
   const isValid =
-    city.length > 0 &&
-    !formErrors.city &&
-    countryName.length > 0 &&
-    !formErrors.countryName &&
-    stateProvinceinfo.length > 0 &&
-    !formErrors.stateProvinceinfo &&
-    zIPPostalCode.length > 0 &&
-    !formErrors.zIPPostalCode;
+    Companycity.length > 0 &&
+    !formErrors.Companycity &&
+    CompanycountryName.length > 0 &&
+    !formErrors.CompanycountryName &&
+    CompanystateProvinceinfo.length > 0 &&
+    !formErrors.CompanystateProvinceinfo &&
+    CompanyzIPPostalCode.length > 0 &&
+    !formErrors.CompanyzIPPostalCode;
 
   return (
     <>
@@ -37,21 +37,20 @@ const PhysicalOperatingAddress = ({
         style={{ margin: "10px 0" }}
         className="TypographyTitle mt-5 mb-4"
       >
-        <h6> Physical Operating Address </h6>
+        <h6>Company Business Address</h6>
       </Typography>
-
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
             label="Country"
-            name="countryName"
+            name="CompanycountryName"
             placeholder="Enter your Country"
-            value={countryName || ""}
+            value={CompanycountryName || ""}
             margin="normal"
             onChange={handleChange}
-            error={!!formErrors.countryName}
-            helperText={formErrors.countryName}
+            error={!!formErrors.CompanycountryName}
+            helperText={formErrors.CompanycountryName}
             required
           />
         </Grid>
@@ -59,13 +58,13 @@ const PhysicalOperatingAddress = ({
           <TextField
             fullWidth
             label="City"
-            name="city"
+            name="Companycity"
             placeholder="Enter your city"
-            value={city || ""}
+            value={Companycity || ""}
             margin="normal"
             onChange={handleChange}
-            error={!!formErrors.city}
-            helperText={formErrors.city}
+            error={!!formErrors.Companycity}
+            helperText={formErrors.Companycity}
             required
           />
         </Grid>
@@ -74,13 +73,13 @@ const PhysicalOperatingAddress = ({
           <TextField
             fullWidth
             label="Street Address"
-            name="streetAddress"
+            name="CompanystreetAddress"
             placeholder="Enter your Street Address"
-            value={streetAddress || ""}
+            value={CompanystreetAddress || ""}
             margin="normal"
             onChange={handleChange}
-            error={!!formErrors.streetAddress}
-            helperText={formErrors.streetAddress}
+            error={!!formErrors.CompanystreetAddress}
+            helperText={formErrors.CompanystreetAddress}
             required
           />
         </Grid>
@@ -89,13 +88,13 @@ const PhysicalOperatingAddress = ({
           <TextField
             fullWidth
             label="State/Province"
-            name="stateProvinceinfo"
+            name="CompanystateProvinceinfo"
             placeholder="Enter your State/Province"
-            value={stateProvinceinfo || ""}
+            value={CompanystateProvinceinfo || ""}
             margin="normal"
             onChange={handleChange}
-            error={!!formErrors.stateProvince}
-            helperText={formErrors.stateProvince}
+            error={!!formErrors.CompanystateProvince}
+            helperText={formErrors.CompanystateProvince}
             required
           />
         </Grid>
@@ -104,13 +103,13 @@ const PhysicalOperatingAddress = ({
           <TextField
             fullWidth
             label=" ZIP/Postal Code"
-            name="zIPPostalCode"
+            name="CompanyzIPPostalCode"
             placeholder="Enter your ZIP/Postal Code"
-            value={zIPPostalCode || ""}
+            value={CompanyzIPPostalCode || ""}
             margin="normal"
             onChange={handleChange}
-            error={!!formErrors.zIPPostalCode}
-            helperText={formErrors.zIPPostalCode}
+            error={!!formErrors.CompanyzIPPostalCode}
+            helperText={formErrors.CompanyzIPPostalCode}
             required
           />
         </Grid>
@@ -119,9 +118,9 @@ const PhysicalOperatingAddress = ({
           <TextField
             fullWidth
             label="Suite, etc.(Optional)"
-            name="optionalinfo"
+            name="Companyoptionalinfo  "
             placeholder="Enter your ZIP/Postal Code"
-            value={optionalinfo || ""}
+            value={Companyoptionalinfo || ""}
             margin="normal"
             onChange={handleChange}
           />
@@ -151,4 +150,4 @@ const PhysicalOperatingAddress = ({
   );
 };
 
-export default PhysicalOperatingAddress;
+export default CompanyBusinessAddress;

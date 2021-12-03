@@ -1,6 +1,7 @@
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 import React, { Fragment } from "react";
 // Destructuring props
 const CompanyName = ({
@@ -18,6 +19,14 @@ const CompanyName = ({
   }
   return (
     <Fragment>
+      <Typography
+        variant="subtitle2"
+        align="center"
+        style={{ margin: "10px 0" }}
+        className="TypographyTitle mt-5"
+      >
+        <h6>Enter Your Company Name</h6>
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
