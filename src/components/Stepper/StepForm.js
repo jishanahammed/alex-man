@@ -179,7 +179,7 @@ const fieldsValidation = {
   Companyoptionalinfo: {
     error: "",
     validate: "text",
-    minLength: 3,
+    minLength: 1,
     maxLength: 200,
   },
   ProductDescription: {
@@ -339,24 +339,22 @@ const StepForm = () => {
       className="d-flex justify-content-center"
       style={{ marginTop: "100px" }}
     >
-      <div className="col-md-6">
+      <div className="col-md-6 mb-5">
+        <Box style={{ margin: "10px 0 10px" }}>
+          <Typography variant="h4" align="center">
+            <div className="mb-4 logo-w">
+              <img src={imgurl} />
+            </div>
+          </Typography>
+        </Box>
+
         <div className="card shadow ">
           <div className="card-body">
             {activeStep === labels.length ? (
               // Last Component
               <Success values={formValues} />
             ) : (
-              <>
-                <Box style={{ margin: "10px 0 10px" }}>
-                  <Typography variant="h4" align="center">
-                    <div className="mb-4 logo-w">
-                      <img src={imgurl} />
-                    </div>
-                  </Typography>
-                </Box>
-
-                {handleSteps(activeStep)}
-              </>
+              <>{handleSteps(activeStep)}</>
             )}
           </div>
         </div>

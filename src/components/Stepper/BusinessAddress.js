@@ -99,8 +99,8 @@ const BusinessAddress = ({
               </span>
             </FormLabel>
             <RadioGroup
-              defaultValue="female"
-              aria-label="gender"
+              defaultValue="Yes"
+              aria-label="Yes"
               name="customized-radios"
             >
               <FormControlLabel

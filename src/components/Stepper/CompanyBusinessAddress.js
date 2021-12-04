@@ -35,7 +35,7 @@ const CompanyBusinessAddress = ({
         variant="subtitle2"
         align="center"
         style={{ margin: "10px 0" }}
-        className="TypographyTitle mt-5 mb-4"
+        className="TypographyTitle"
       >
         <h6>Company Business Address</h6>
       </Typography>
@@ -118,11 +118,13 @@ const CompanyBusinessAddress = ({
           <TextField
             fullWidth
             label="Suite, etc.(Optional)"
-            name="Companyoptionalinfo  "
-            placeholder="Enter your ZIP/Postal Code"
+            name="Companyoptionalinfo"
+            placeholder="Suite, etc.(Optional)"
             value={Companyoptionalinfo || ""}
             margin="normal"
             onChange={handleChange}
+            error={!!formErrors.Companyoptionalinfo}
+            helperText={formErrors.Companyoptionalinfo}
           />
         </Grid>
       </Grid>

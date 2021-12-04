@@ -37,13 +37,12 @@ const PersonalInformation = ({
       <Typography
         variant="subtitle2"
         align="center"
-        style={{ margin: "10px 0" }}
-        className="TypographyTitle mt-5"
+        className="TypographyTitle"
       >
         <h6> Personal information</h6>
       </Typography>
       <Grid container spacing={2} noValidate>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             fullWidth
             label="First Name"
@@ -59,7 +58,7 @@ const PersonalInformation = ({
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             fullWidth
             label="Middle Name"
@@ -72,7 +71,7 @@ const PersonalInformation = ({
           />
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             fullWidth
             label="Last Name"
@@ -88,7 +87,7 @@ const PersonalInformation = ({
           />
         </Grid>
 
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             fullWidth
             label="Email"
@@ -105,7 +104,7 @@ const PersonalInformation = ({
           />
         </Grid>
 
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             required
             fullWidth
@@ -121,7 +120,7 @@ const PersonalInformation = ({
           />
         </Grid>
 
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={4} sm={6}>
           <TextField
             fullWidth
             label="Country of Residency"

@@ -39,7 +39,7 @@ const ChooseState = ({
         variant="subtitle2"
         align="center"
         style={{ margin: "10px 0" }}
-        className="TypographyTitle mt-5"
+        className="TypographyTitle"
       >
         <h6> Which state do you prefer to register your business in? </h6>
       </Typography>

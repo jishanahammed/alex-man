@@ -13,10 +13,21 @@ code {
     monospace;
 }
 .card {
-  position: relative;
+  /* position: relative;
   background-color: #10153121;
   color: inherit;
   border: 1px solid #898996;
+  border-radius: 8px; */
+  width: 704px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 33px;
+  position: relative;
+  background-color: #121212;
+  color: inherit;
+  border: 1px solid #1c1c1e;
   border-radius: 8px;
 }
 

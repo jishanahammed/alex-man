@@ -34,8 +34,7 @@ const PhysicalOperatingAddress = ({
       <Typography
         variant="subtitle2"
         align="center"
-        style={{ margin: "10px 0" }}
-        className="TypographyTitle mt-5 mb-4"
+        className="TypographyTitle"
       >
         <h6> Physical Operating Address </h6>
       </Typography>
@@ -120,7 +119,7 @@ const PhysicalOperatingAddress = ({
             fullWidth
             label="Suite, etc.(Optional)"
             name="optionalinfo"
-            placeholder="Enter your ZIP/Postal Code"
+            placeholder="Suite, etc.(Optional)"
             value={optionalinfo || ""}
             margin="normal"
             onChange={handleChange}
